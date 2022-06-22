@@ -26,10 +26,10 @@ function timeToString(time) {
     let diffInHrs = time / (3600000);
     let hh = Math.floor(diffInHrs);
 
-    let diffInMin = (diffInHrs - hh)*60;
+    let diffInMin = (diffInHrs - hh) * 60;
     let mm = Math.floor(diffInMin);
 
-    let diffInSec = (diffInMin - mm)*60;
+    let diffInSec = (diffInMin - mm) * 60;
     let ss = Math.floor(diffInSec);
 
     let diffInMs = (diffInSec - ss) * 1000;
