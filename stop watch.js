@@ -40,7 +40,7 @@ function timeToString(time) {
     let formattedSS = ss.toString().padStart(2, "0");
     let formattedMS = ms.toString().padStart(3, "0");
 
-    stopwatch.innerHTML = `${ formattedHH }:${ formattedMM }:${ formattedSS }:${ formattedMS }`;
+    stopwatch.innerHTML = `${formattedHH}:${formattedMM}:${formattedSS}:${formattedMS}`;
 
 }
 
@@ -52,7 +52,7 @@ function stopStopwatch() {
 function resetStopwatch() {
     clearInterval(stopWatchInterval);
     showButton("PLAY");
-    stopwatch.innerHTML = `00: 00: 00: 000`;
+    stopwatch.innerHTML = `00:00:00:000`;
     elapsedTime = 0;
 
 }
