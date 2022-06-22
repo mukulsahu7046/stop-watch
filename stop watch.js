@@ -26,10 +26,10 @@ function timeToString(time) {
     let diffInHrs = time / (3600000);
     let hh = Math.floor(diffInHrs);
 
-    let diffInMin = (diffInHrs - hh)60;
+    let diffInMin = (diffInHrs - hh)*60;
     let mm = Math.floor(diffInMin);
 
-    let diffInSec = (diffInMin - mm)60;
+    let diffInSec = (diffInMin - mm)*60;
     let ss = Math.floor(diffInSec);
 
     let diffInMs = (diffInSec - ss) * 1000;
@@ -40,7 +40,7 @@ function timeToString(time) {
     let formattedSS = ss.toString().padStart(2, "0");
     let formattedMS = ms.toString().padStart(3, "0");
 
-    stopwatch.innerHTML = ${ formattedHH }:${ formattedMM }:${ formattedSS }:${ formattedMS };
+    stopwatch.innerHTML = `${ formattedHH }:${ formattedMM }:${ formattedSS }:${ formattedMS }`;
 
 }
 
@@ -52,7 +52,7 @@ function stopStopwatch() {
 function resetStopwatch() {
     clearInterval(stopWatchInterval);
     showButton("PLAY");
-    stopwatch.innerHTML = 00: 00: 00: 000;
+    stopwatch.innerHTML = `00: 00: 00: 000`;
     elapsedTime = 0;
 
 }
